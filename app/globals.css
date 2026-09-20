@@ -166,6 +166,13 @@ button:focus-visible { outline: 2px solid var(--gold-bright); outline-offset: 4p
 .generated-card-art.generated-major-tall { left: 16.666%; right: 16.666%; border-radius: 8px; }
 .card-face > .face-number, .card-face > strong, .card-face::before, .card-face::after { display: none; }
 .modal-visual { aspect-ratio: auto; }
+.symbol-reading { margin-top: 22px; padding: 18px; border: 1px solid #c9c2b6; border-radius: 10px; background: #fffdf8; }
+.symbol-reading > span { color: #b95947; font-size: 11px; letter-spacing: .1em; }
+.symbol-list { display: grid; gap: 13px; margin-top: 13px; }
+.symbol-list > div { display: grid; grid-template-columns: minmax(82px, .36fr) 1fr; gap: 12px; align-items: start; }
+.symbol-list strong { color: #35342f; font-size: 12px; font-weight: 400; }
+.symbol-list p { margin: 0; color: #66645d; font-size: 12px; line-height: 1.7; }
+.symbol-reading small { display: block; margin-top: 14px; padding-top: 12px; border-top: 1px dashed #d5cfc4; color: #8a877f; font-size: 10px; line-height: 1.6; }
 
 @media (max-width: 650px) {
   .reading-row.mode-3 .generated-card-art { inset: 0; }
@@ -289,6 +296,7 @@ html, body { background: #f5f1e9; color: #282823; font-family: Arial, "Malgun Go
 @media (max-width: 650px) {
   .reading-row.mode-3 .generated-card-art { inset: 0; }
   .reading-row.mode-3 .generated-card-art.generated-major-tall { left: 16.666%; right: 16.666%; }
+  .symbol-list > div { grid-template-columns: 1fr; gap: 4px; }
 }
 
 /* Body typography supplied by the user */

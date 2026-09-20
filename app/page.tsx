@@ -262,6 +262,15 @@ function CardModal({ selected, position, onClose, returnFocus }: { selected: Sel
           <span className="eyebrow">{position ? `${position.label} · ` : ""}{classification}</span>
           <h2 id="modal-title">{card.name}</h2>
           <div className="keyword-list">{card.keywords.map((keyword) => <span key={keyword}>{keyword}</span>)}</div>
+          <section className="symbol-reading" aria-labelledby="symbol-reading-title">
+            <span id="symbol-reading-title">그림 속 상징</span>
+            <div className="symbol-list">
+              {card.symbols.map((item) => (
+                <div key={item.label}><strong>{item.label}</strong><p>{item.meaning}</p></div>
+              ))}
+            </div>
+            <small>상징은 질문과 주변 카드에 따라 여러 방향으로 읽힐 수 있습니다.</small>
+          </section>
           {position && <div className="position-reading"><strong>{position.label}의 해설</strong><p>{card.positionMeanings[position.key]}</p></div>}
           <div className="detail-section"><span>전체 의미</span><p>{card.meaning}</p></div>
           <div className="detail-grid">
